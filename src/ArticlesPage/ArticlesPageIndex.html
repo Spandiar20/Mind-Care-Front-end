@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="fa">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+    <link href="../output.css" rel="stylesheet">
+    <link rel="stylesheet" href="/src/sideMenu.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    
+    <title>Articles Page</title>
+</head>
+
+<body class="overflow-x-hidden font-iransansx">
+    
+    <nav class="navBar w-full bg-white py-4 px-16 md:px-5">
+        
+        <div class="flex w-full flex-row-reverse gap-4 justify-between items-center">
+            
+            <div class="hidden md:inline-block">
+                <i class="fa fa-bars text-black fa-lg cursor-pointer" id="hamburgerMenuButton" aria-hidden="true"></i>
+            </div>
+
+            <div class="w-[17%] min-w-[8rem]">
+                <img src="/Images/IntroductionPage/MindCareLogo.svg" alt="MindCareLogo">
+            </div>
+
+            <div class="navBarLinks flex gap-12 justify-between flex-row-reverse md:hidden">
+                <a href="" class="navBarLink text-black">صفحه اصلی</a>
+                <a href="" class="navBarLink text-black">معرفی خدمات</a>
+                <a href="" class="navBarLink text-black">پروفایل</a>
+                <a href="" class="navBarLink text-black">درمانگر</a>
+                <a href="" class="navBarLink text-black">بلاگ</a>
+                <a href="" class="navBarLink text-black">تماس با ما</a>
+            </div>
+
+            <!-- SearchBar -->
+            <div class="flex flex-row border-2 border-[#aaaaaf] rounded-full w-fit md:w-[70%] bg-[#e5e5e5] items-center px-4 gap-2 py-2 md:py-1 md:px-2 justify-between">
+                <input class="bg-[#e5e5e5] outline-none w-full md:text-sm" dir="rtl" type="text" name="text" id="Text"
+                    placeholder="جستوجو کنید...">
+                <i class="fa fa-search fa-2x md:fa-sm" style="color:#aaaaaa"></i>
+            </div>
+
+
+
+        </div>
+
+    </nav>
+
+    <div
+        class="slideMenu hidden md:flex flex-col items-center px-[5%] py-4 bg-white fixed z-10 top-0 h-full w-64 text-white transition-all duration-300 right-[-16rem]">
+
+        <img src="/Images/slideMenu/SlideMenuLogo.svg" class="w-28" alt="">
+
+        <hr class="my-6 bg-slate-500 w-full">
+
+        <div class="navBarLinks flex gap-2 justify-between flex-col items-end w-full">
+            <a href="" class="navBarLink text-black flex flex-row-reverse gap-2 py-4 px-2"><i
+                    class="fa fa-home fa-lg"></i>صفحه اصلی</a>
+            <a href=""
+                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                    class="fa fa-user fa-lg"></i>معرفی خدمات</a>
+            <a href=""
+                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                    class="fa fa-user-md fa-lg"></i>پروفایل</a>
+            <a href=""
+                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                    class="fa fa-cogs fa-lg"></i>درمانگر</a>
+            <a href=""
+                class="navBarLink  text-[#FFC14F] flex flex-row-reverse gap-2 rounded-lg w-full py-4 px-2"><i
+                    class="fa fa-headphones fa-lg"></i>بلاگ</a>
+            <a href=""
+                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                    class="fa fa-window-maximize fa-lg"></i>تماس با ما</a>
+        </div>
+    </div>
+
+    <header class=" pb-20 w-full flex md:flex-col-reverse h-[32rem] rounded-3xl overflow-hidden justify-between items-center text-right relative z-1">
+
+        <img src="/Images/ArticlesPage/Headerbanner.png" class="lg:h-full w-full object-cover" alt="">
+
+        <div class="absolute flex flex-col items-end gap-4 right-0 bottom-0 pr-[10%] md:bottom-24 md:pr-[3%] pb-[8%] w-[40%] md:w-[90%]">
+
+            <small class="bg-white w-fit p-2 rounded-md font-extrabold">منتخب هفته</small>
+            <h2 class="text-4xl font-extrabold text-white lg:text-xl">
+                رواندرمانی از چه مراحلی تشکیل شده و چگونه انجام میشود؟
+            </h2>
+
+            <p class="text-white text-sm">
+                این روزها که تقریبا تمامی افراد جامعه به گوشی هوشمند و فضای مجازی دسترسی دارند، برای خاص بودن باید کاری بیشتر از یک پست
+                گذاشتن ساده انجام داد. برای خاص بودن باید متن خود را طراحی کنید.
+            </p>
+
+        </div>
+
+    </header>
+
+    <main class="articles my-24 md:my-8 grid grid-cols-3 lg:grid-cols-1 gap-8 justify-items-center">
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+        <div
+            class="articleCard swiper-slide shadow-xl cursor-pointer hover:bg-[#dedede] transition-all pb-4 flex flex-col rounded-2xl w-80">
+        
+            <div class="w-full">
+                <img src="/Images//LandingPage/ArticleCardPic.png" alt="">
+            </div>
+        
+            <div class="px-[5%] items-end flex flex-col">
+        
+                <small class="pt-2 text-gray-600 text-xs">1402/8/12</small>
+        
+                <div class="flex flex-row-reverse justify-between w-full items-start">
+        
+                    <h4 class="font-extrabold" dir="rtl">مغز چیست؟</h4>
+        
+                    
+                </div>
+        
+                <p class="text-right mt-3">در این مقاله به این اشاره میکنیم که مغز چیست و ...</p>
+        
+                <a class="text-gray-700 mt-8" href="">ادامه مطلب...</a>
+        
+            </div>
+        
+        </div>
+
+    </main>
+
+    <footer class="px-[5%] pt-8 bg-[#21273D] flex justify-center gap-4 flex-row md:flex-wrap">
+        <div class=" basis-[20%] border-white md:border-none md:order-3 md:basis-[10%]">
+            <div
+                class="navBarLinks flex flex-col gap-8 p-4 pb-4 justify-between items-center whitespace-nowrap md:border-l">
+                <a href="" class="navBarLink text-white">صفحه اصلی</a>
+                <a href="" class="navBarLink text-white">معرفی خدمات</a>
+                <a href="" class="navBarLink text-white">پروفایل</a>
+                <a href="" class="navBarLink text-white">درمانگر</a>
+                <a href="" class="navBarLink text-white">بلاگ</a>
+                <a href="" class="navBarLink text-white">تماس با ما</a>
+            </div>
+        </div>
+    
+        <div class="border-l-2 basis-[59%] border-white px-12 md:px-0 py-8 md:border-none md:order-1 md:basis-[100%]">
+    
+            <p class="text-white md:text-sm" dir="rtl">این روزها که تقریبا تمامی افراد جامعه به گوشی هوشمند و فضای مجازی
+                دسترسی دارند، برای خاص بودن باید کاری بیشتر از یک پست
+                گذاشتن ساده انجام داد. برای خاص بودن باید متن خود را طراحی کنید. افراد خاص برای نگارش متن بیوگرافی، کپشن،
+                دلنوشته و غیره
+                وقت صرف میکنند. در گذشته برای اینکار نه تنها خلاقیت و ذهن پویا لازم بود، بلکه دسترسی به فونت های زیبا و کم
+                نظیر و همچنین
+                توانایی و دانش استفاده از آنها نیز اهمیت به سزایی داشت. اما نویدک با ساخت این ابزار طراحی متن را بسیار آسان
+                کرده است.
+        </div>
+    
+        <div class="md:border-l-2 basis-[20%] flex flex-col md:order-3 border-white md:border-none md:basis-[10%]">
+    
+            <div class="pb-2 border-white flex flex-col items-center md:border-b-0">
+    
+                <img src="/Images//LandingPage/footerLogo.png" class="w-24" alt="">
+    
+                <div class="socialLinks flex mt-4 pb-4 md:pb-0">
+    
+                    <i class="fa fa-paper-plane text-white fa-lg p-4 md:p-2 mt-2 rounded-full cursor-pointer hover:text-blue-500 transition-colors"
+                        aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-green-600 transition-colors"
+                        aria-hidden="true"></i>
+                    <i class="fa fa-instagram text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-purple-600 transition-colors"
+                        aria-hidden="true"></i>
+                    <i class="fa fa-youtube-play text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-red-600 transition-colors"
+                        aria-hidden="true"></i>
+                </div>
+    
+            </div>
+            <div class="md:order-1">
+                <ul class="text-white md:text-xs whitespace-nowrap flex flex-col items-end py-4">
+                    <li dir="rtl">ایمیل: spandiarsantal@gmail.com</li>
+                    <li dir="rtl">شماره تلفن: 123456789</li>
+                    <li>آدرس: تهران، مرکز تهران</li>
+                </ul>
+            </div>
+    
+        </div>
+    
+    </footer>
+
+    <script src="../utils/sideMenu.js"></script>
+
+    
+</body>
+</html>

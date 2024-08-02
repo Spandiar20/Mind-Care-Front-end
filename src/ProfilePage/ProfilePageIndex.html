@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+
+    <link href="../output.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+</head>
+<body class="bg-[#21273D] font-iransansx">
+
+    <div class="fixed messageBox hidden flex items-center justify-center w-full z-20 mt-[5rem]">
+    
+        <section
+            class=" backdrop-blur-lg bg-white py-8 shadow-2xl px-[5%] rounded-lg flex flex-col gap-8 items-center justify-center">
+    
+            <div class="patientSelect flex gap-2 flex-row-reverse w-full justify-between items-center">
+    
+                <div dir="rtl" class="text-sm">شماره تلفن:</div>
+    
+                <input type="tel" name="" class="border-2 rounded-lg outline-none py-2 resize-none" dir="rtl" id="">
+    
+            </div>
+    
+            <div class="patientSelect flex gap-2 flex-row-reverse w-full justify-between items-center">
+    
+                <div dir="rtl" class="text-sm">نام و نام خانوادگی :</div>
+    
+                <input type="text" name="" class="border-2 rounded-lg outline-none py-2 resize-none" dir="rtl" id="">
+    
+            </div>
+    
+            <div class="patientSelect flex gap-2 flex-row-reverse w-full justify-between items-center">
+    
+                <div dir="rtl" class="text-sm">ایمیل :</div>
+    
+                <input type="email" name="" class="border-2 rounded-lg outline-none py-2 resize-none" dir="rtl" id="">
+    
+            </div>
+    
+            <div class="patientMessage flex flex-row-reverse gap-2 items-center justify-between w-full">
+    
+                <div dir="rtl" class="text-sm">توصیه بیمار:</div>
+    
+                <textarea type="text" name="message" id="" class="border-2 rounded-lg outline-none py-2 resize-none"
+                    dir="rtl"></textarea>
+    
+            </div>
+    
+            <div class="patientMessage flex flex-row-reverse gap-2 items-center justify-between w-full">
+    
+                <div dir="rtl" class="text-sm">آپلود عکس :</div>
+    
+                <input type="file" class="cursor-pointer bg-[#21273D] hover:bg-[#141724] text-white font-bold py-2 px-4 rounded" width="48" height="48">
+    
+            </div>
+    
+            <div class="flex w-full gap-4">
+                <button
+                    class="border-none outline-none bg-cyan-950 text-white w-full text-sm rounded-lg py-2">تایید</button>
+                <button class="cancelButton outline-none border-2 border-black w-full text-sm rounded-lg py-2">لفو</button>
+            </div>
+    
+        </section>
+    
+    </div>
+
+    <div class="fixed brainMapImage hidden flex items-center justify-center w-full z-20 mt-[10rem]">
+    
+        <img src="/Images/ProfilePage/BrainMap.png" class="" alt="">
+    
+    </div>
+
+    <nav>
+
+        <section class="responsiveMenu hidden md:grid grid-cols-3 justify-end items-center px-[5%] py-4">
+            
+            <div></div>
+
+            <img src="/Images/LandingPage/Group 28.png" class="w-52 justify-self-center" alt="">
+            
+            <div class="flex justify-end">
+            <i class="fa fa-bars text-white fa-lg cursor-pointer align-end" id="hamburgerMenuButton" aria-hidden="true"></i>
+                
+            </div>
+        
+        </section>
+
+        <div class="navBarLinks flex justify-between px-[30%] mt-6 flex-row-reverse md:hidden">
+            <a href="" class="navBarLink text-white">صفحه اصلی</a>
+            <a href="" class="navBarLink text-white">معرفی خدمات</a>
+            <a href="" class="navBarLink text-gray-400">پروفایل</a>
+            <a href="" class="navBarLink text-white">درمانگر</a>
+            <a href="" class="navBarLink text-white">بلاگ</a>
+            <a href="" class="navBarLink text-white">تماس با ما</a>
+        </div>
+    </nav>
+
+    <div
+        class="slideMenu hidden md:flex z-10 flex-col items-center px-[5%] py-4 bg-white fixed top-0 h-full w-64 text-white transition-all duration-300 right-[-16rem]">
+    
+        <img src="/Images/slideMenu/SlideMenuLogo.svg" class="w-28" alt="">
+    
+        <hr class="my-6 bg-slate-500 w-full">
+    
+        <div class="navBarLinks text-black flex gap-2 justify-between flex-col items-end w-full">
+            <a href="" class="navBarLink flex flex-row-reverse gap-2 py-4 px-2"><i
+                    class="fa fa-home fa-lg"></i>صفحه اصلی</a>
+            <a href=""
+                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                    class="fa fa-user fa-lg"></i>معرفی خدمات</a>
+            <a href=""
+                class="navBarLink flex flex-row-reverse gap-2 rounded-lg text-black w-full py-4 px-2"><i
+                    class="fa fa-sign-in fa-lg"></i>ورود</a>
+            <a href=""
+                class="navBarLink flex flex-row-reverse gap-2 rounded-lg text-black w-full py-4 px-2"><i
+                    class="fa fa-user-plus fa-lg"></i>ثبت نام</a>
+            <a href=""
+                class="navBarLink flex flex-row-reverse gap-2 rounded-lg text-[#FFC14F] w-full py-4 px-2"><i
+                    class="fa fa-user-md fa-lg"></i>پروفایل</a>
+            <a href=""
+                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                    class="fa fa-cogs fa-lg"></i>درمانگر</a>
+            <a href=""
+                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                    class="fa fa-headphones fa-lg"></i>بلاگ</a>
+            <a href=""
+                class="navBarLink flex flex-row-reverse gap-2 rounded-lg w-full py-4 px-2"><i
+                    class="fa fa-window-maximize fa-lg"></i>تماس با ما</a>
+        </div>
+    </div>
+
+    <header class="h-[30rem] md:h-[20rem] mt-8 px-[5%]">
+
+        <div class="h-[20rem] md:h-[10rem] overflow-hidden object-cover w-full rounded-xl">
+            <img src="/Images/ProfilePage/16679203_5774968 1.png" class="w-full md:h-full object-cover" alt="">
+        </div>
+
+        <div class="flex justify-between flex-row-reverse gap-3 mt-[-6rem] md:mt-[-8rem] px-6 md:px-2 items-end">
+
+            <div class="flex justify-between flex-row-reverse">
+
+                <div class="relative z-1 md:mt-12">
+                    <img src="/Images/ProfilePage/ProfilePersona.png" class="min-w-40 md:min-w-28" alt="">
+                    <i class="fa fa-plus bg-white rounded-full px-2 py-1.5 absolute right-4 md:right-2 bottom-5 md:bottom-1"></i>
+                </div>
+                
+                <div class="flex flex-col items-end justify-end text-white pb-4 pr-2">
+                
+                    <h4 class="text-3xl font-extrabold md:text-sm">حمیدرضا محمدی</h4>
+                    <small>spandiarsantal@gmail.com</small>
+                
+                </div>
+            </div>
+
+            <button class="editProfileBtn border-4 rounded-xl px-4 py-3 md:px-1 md:text-xs md:py-1 border-white text-white text-sm hover:bg-blue-900 transition-all mb-4">ویرایش اطلاعات</button>
+
+        </div>
+
+    </header>
+
+    
+    <main class="flex flex-col items-center gap-12 px-[25%] md:px-[5%] py-8">
+
+        <section class="careStep flex flex-row-reverse justify-between items-center gap-8 w-full relative">
+
+            <div class="basis-[60%] cursor-pointer">
+                <img class="w-full" src="/Images/ProfilePage/Group 98.svg" alt="">
+            </div>
+
+            <div class="absolute top-20 text-white font-extrabold text-xl right-[-4rem] md:text-xs md:right-0 md:top-8">نقشه مغزی ساده با سس اضافه</div>
+
+            <div class="popUpImage basis-[40%]">
+                <img src="/Images/ProfilePage/BrainMap.png" alt="">
+            </div>
+
+        </section>
+
+        <section class="careStep flex justify-between items-center gap-8 w-full relative">
+
+            <div class="basis-[60%] cursor-pointer">
+                <img class="w-full" src="/Images/ProfilePage/InProcess.svg" alt="">
+            </div>
+
+            <div class="absolute top-20 text-white font-extrabold text-xl left-[-4rem] md:text-xs md:left-0 md:top-8">نقشه مغزی ساده با سس اضافه</div>
+
+
+            <div class="basis-[40%]">
+                <img src="" alt="">
+            </div>
+
+        </section>
+
+        <section class="careStep flex flex-row-reverse justify-between items-center gap-8 w-full relative">
+
+            <div class="basis-[60%] cursor-pointer">
+                <img class="w-full" src="/Images/ProfilePage/NextSteps.svg" alt="">
+            </div>
+
+            <div class="absolute top-20 text-white font-extrabold text-xl right-[-4rem] md:text-xs md:right-0 md:top-8">نقشه مغزی ساده با سس اضافه</div>
+
+
+            <div class="basis-[40%]">
+                <img src="" alt="">
+            </div>
+
+        </section>
+
+        
+    </main>
+
+    <section class="my-20">
+
+        <div class="flex flex-row-reverse md:flex-col gap-10 justify-between items-center w-full px-[5%]">
+
+            <div class="infoChart flex flex-col gap-4 items-end bg-white px-4 py-6 w-[30%] md:w-full rounded-xl">
+
+                <h4 class="text-lg font-extrabold">اطلاعات عمومی</h4>
+
+                <div class="infobox flex flex-col gap-5 w-full">
+
+                    <div class="infoRow flex flex-row-reverse justify-between items-center">
+                        <div class="infoTtl">نام و نام خانوداگی</div>
+                        <div class="infoValue">سامان برزگر</div>
+                    </div>
+
+                    <div class="infoRow flex flex-row-reverse justify-between items-center">
+                        <div class="infoTtl">شماره تلفن</div>
+                        <div class="infoValue">09170796792</div>
+                    </div>
+
+                    <div class="infoRow flex flex-row-reverse justify-between items-center">
+                        <div class="infoTtl">ایمیل</div>
+                        <div class="infoValue">spandiarsantal@gmail.com</div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="profileStatus w-[60%] md:w-full bg-white rounded-xl">
+
+                <section class="content overflow-hidden flex w-full py-4">
+                
+                    <div class="flex w-full md:flex-col">
+
+                        <div class="w-[50%] md:w-full border-l-2 px-[7%]">
+                
+                            <h3 class="font-extrabold text-lg my-4" dir="rtl">پروفایل شناختی</h3>
+                
+                            <ul class="grid grid-cols-2 w-full my-4 gap-8 list-disc">
+                
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                            </ul>
+                
+                        </div>
+                
+                        <div class="w-[50%] md:w-full px-[5%]">
+                
+                            <h3 class="font-extrabold text-lg my-4" dir="rtl">پروفایل رفتاری</h3>
+                
+                            <ul class="grid grid-cols-2 w-full my-4 gap-8 list-disc">
+                
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                                <li class="flex justify-evenly items-center">
+                                    <div>گزینه 1</div>
+                
+                                    <div
+                                        class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                        7</div>
+                                </li>
+                            </ul>
+                
+                
+                        </div>
+
+                    </div>
+                
+                </section>
+                
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="px-[5%] my-16">
+
+        <div class="sectionHeader flex flex-row justify-end gap-2 text-white font-extrabold text-3xl">
+            
+            <h3>توصیه متخصصان</h3>
+
+            <i class="fa fa-envelope-o"></i>
+
+        </div>
+
+        <div class="items-center flex flex-col mt-16">
+
+            <div class="w-full flex flex-col gap-6 items-center">
+
+                <div class="messageBox flex justify-between items-center flex-col px-6 py-4 bg-white rounded-2xl w-[60%] md:w-full">
+                
+                    <div class="message flex justify-between flex-row-reverse items-center w-full">
+                
+                        <div class="flex flex-row-reverse justify-between items-center">
+                            <div class="">
+                                <img src="/Images/ProfilePage/ProfilePersona.png" class="w-16" alt="">
+                            </div>
+                            
+                            <div class="flex flex-col items-end justify-center pr-2">
+                            
+                                <h4 class="text-sm font-extrabold">حمیدرضا محمدی</h4>
+                                <small>spandiarsantal@gmail.com</small>
+                            
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row-reverse justify-betwen gap-4 w-[8rem]">
+                            <small dir="rtl">2 روز قبل</small>
+                            
+                            <i class="fa fa-angle-down w-4 cursor-pointer transition-all"></i>
+                        </div>
+                    </div>
+                
+                    <div class="messageContent w-full hidden">
+                        <div class="flex justify-end mt-4 mr-4 gap-2">
+                            <p class="text-sm">مرتیکه شکر کمتر بخورن برای خودت نمیکنی برای خدا بکن</p>
+                    
+                        </div>
+                    </div>
+                    
+                
+                </div>
+
+                <div class="messageBox flex justify-between items-center flex-col px-6 py-4 items-end bg-white rounded-2xl w-[60%] md:w-full">
+                
+                    <div class="message flex justify-between flex-row-reverse items-center w-full">
+                
+                        <div class="flex flex-row-reverse justify-between items-center">
+                            <div class="">
+                                <img src="/Images/ProfilePage/ProfilePersona.png" class="w-16" alt="">
+                            </div>
+                            
+                            <div class="flex flex-col items-end justify-center pr-2">
+                            
+                                <h4 class="text-sm font-extrabold">حمیدرضا محمدی</h4>
+                                <small>spandiarsantal@gmail.com</small>
+                            
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row-reverse justify-betwen gap-4 w-[8rem]">
+                            <small dir="rtl">2 روز قبل</small>
+                            
+                            <i class="fa fa-angle-down w-4 cursor-pointer transition-all"></i>
+                        </div>
+                    </div>
+                
+                    <div class="messageContent w-full hidden">
+                        <div class="flex justify-end mt-4 mr-4 gap-2">
+                            <p class="text-sm">مرتیکه شکر کمتر بخورن برای خودت نمیکنی برای خدا بکن</p>
+                    
+                        </div>
+                    </div>
+                    
+                
+                </div>
+
+                <div class="messageBox flex justify-between items-center flex-col px-6 py-4 items-end bg-white rounded-2xl w-[60%] md:w-full">
+                
+                    <div class="message flex justify-between flex-row-reverse items-center w-full">
+                
+                        <div class="flex flex-row-reverse justify-between items-center">
+                            <div class="">
+                                <img src="/Images/ProfilePage/ProfilePersona.png" class="w-16" alt="">
+                            </div>
+                            
+                            <div class="flex flex-col items-end justify-center pr-2">
+                            
+                                <h4 class="text-sm font-extrabold">حمیدرضا محمدی</h4>
+                                <small>spandiarsantal@gmail.com</small>
+                            
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row-reverse justify-betwen gap-4 w-[8rem]">
+                            <small dir="rtl">2 روز قبل</small>
+                            
+                            <i class="fa fa-angle-down w-4 cursor-pointer transition-all"></i>
+                        </div>
+                    </div>
+                
+                    <div class="messageContent w-full hidden">
+                        <div class="flex justify-end mt-4 mr-4 gap-2">
+                            <p class="text-sm">مرتیکه شکر کمتر بخورن برای خودت نمیکنی برای خدا بکن</p>
+                    
+                        </div>
+                    </div>
+                    
+                
+                </div>
+                    
+                
+
+    </section>
+
+    <footer class="px-[5%] pt-8 bg-[#21273D] flex justify-center gap-4 flex-row md:flex-wrap">
+        <div class=" basis-[20%] border-white md:border-none md:order-3 md:basis-[10%]">
+            <div
+                class="navBarLinks flex flex-col gap-8 p-4 pb-4 justify-between items-center whitespace-nowrap md:border-l">
+                <a href="" class="navBarLink text-white">صفحه اصلی</a>
+                <a href="" class="navBarLink text-white">معرفی خدمات</a>
+                <a href="" class="navBarLink text-white">پروفایل</a>
+                <a href="" class="navBarLink text-white">درمانگر</a>
+                <a href="" class="navBarLink text-white">بلاگ</a>
+                <a href="" class="navBarLink text-white">تماس با ما</a>
+            </div>
+        </div>
+
+        <div class="border-l-2 basis-[59%] border-white px-12 md:px-0 py-8 md:border-none md:order-1 md:basis-[100%]">
+
+            <p class="text-white md:text-sm" dir="rtl">این روزها که تقریبا تمامی افراد جامعه به گوشی هوشمند و فضای مجازی
+                دسترسی دارند، برای خاص بودن باید کاری بیشتر از یک پست
+                گذاشتن ساده انجام داد. برای خاص بودن باید متن خود را طراحی کنید. افراد خاص برای نگارش متن بیوگرافی، کپشن،
+                دلنوشته و غیره
+                وقت صرف میکنند. در گذشته برای اینکار نه تنها خلاقیت و ذهن پویا لازم بود، بلکه دسترسی به فونت های زیبا و کم
+                نظیر و همچنین
+                توانایی و دانش استفاده از آنها نیز اهمیت به سزایی داشت. اما نویدک با ساخت این ابزار طراحی متن را بسیار آسان
+                کرده است.
+        </div>
+
+        <div class="md:border-l-2 basis-[20%] flex flex-col md:order-3 border-white md:border-none md:basis-[10%]">
+
+            <div class="pb-2 border-white flex flex-col items-center md:border-b-0">
+
+                <img src="/Images//LandingPage/footerLogo.png" class="w-24" alt="">
+
+                <div class="socialLinks flex mt-4 pb-4 md:pb-0">
+
+                    <i class="fa fa-paper-plane text-white fa-lg p-4 md:p-2 mt-2 rounded-full cursor-pointer hover:text-blue-500 transition-colors"
+                        aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-green-600 transition-colors"
+                        aria-hidden="true"></i>
+                    <i class="fa fa-instagram text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-purple-600 transition-colors"
+                        aria-hidden="true"></i>
+                    <i class="fa fa-youtube-play text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-red-600 transition-colors"
+                        aria-hidden="true"></i>
+                </div>
+
+            </div>
+            <div class="md:order-1">
+                <ul class="text-white md:text-xs whitespace-nowrap flex flex-col items-end py-4">
+                    <li dir="rtl">ایمیل: spandiarsantal@gmail.com</li>
+                    <li dir="rtl">شماره تلفن: 123456789</li>
+                    <li>آدرس: تهران، مرکز تهران</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <script src="../utils/sideMenu.js"></script>
+    <script src="ProfilePageIndex.js"></script>
+
+</body>
+</html>

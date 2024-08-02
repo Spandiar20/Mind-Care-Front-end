@@ -1,0 +1,874 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="../output.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Treater Page</title>
+</head>
+<body class="relative font-iransansx">
+
+        <div class="fixed flex items-center justify-center w-full z-20 mt-[15rem]">
+
+            <section class="messageBox hidden backdrop-blur-lg bg-white py-8 shadow-2xl px-[5%] rounded-lg flex flex-col gap-8 items-center justify-center">
+            
+                <div class="patientSelect flex gap-2 flex-row-reverse w-full justify-between items-center">
+            
+                    <div dir="rtl" class="text-sm">انتخاب بیمار:</div>
+            
+                    <select name="patients" class="border-2 bg-white text-sm rounded-lg p-1" id="">
+                        <option value="default">لطفا بیماری را انتخاب کنید</option>
+                    </select>
+            
+                </div>
+            
+                <div class="patientMessage flex flex-row-reverse gap-2 items-center justify-between w-full">
+            
+                    <div dir="rtl" class="text-sm">توصیه بیمار:</div>
+            
+                    <textarea type="text" name="message" id="" class="border-2 rounded-lg outline-none py-2 resize-none"
+                        dir="rtl"></textarea>
+            
+                </div>
+            
+                <div class="flex w-full gap-4">
+                    <button class="border-none outline-none bg-cyan-950 text-white w-full text-sm rounded-lg py-2">تایید</button>
+                    <button class="cancelButton outline-none border-2 border-black w-full text-sm rounded-lg py-2">لفو</button>
+                </div>
+            
+            </section>
+
+        </div>
+
+        <nav class="bg-[#21273D] pb-8">
+        
+            <section class="responsiveMenu hidden md:grid grid-cols-3 justify-end items-center px-[5%] md:px-[2%] py-4">
+        
+                <div></div>
+        
+                <img src="/Images/LandingPage/Group 28.png" class="w-52 justify-self-center" alt="">
+        
+                <div class="flex justify-end">
+                    <i class="fa fa-bars text-white fa-lg cursor-pointer align-end" id="hamburgerMenuButton"
+                        aria-hidden="true"></i>
+        
+                </div>
+        
+            </section>
+        
+            <div class="navBarLinks flex justify-between px-[30%] pt-6 flex-row-reverse md:hidden">
+                <a href="" class="navBarLink text-white">صفحه اصلی</a>
+                <a href="" class="navBarLink text-white">معرفی خدمات</a>
+                <a href="" class="navBarLink text-white">پروفایل</a>
+                <a href="" class="navBarLink text-gray-400">درمانگر</a>
+                <a href="" class="navBarLink text-white">بلاگ</a>
+                <a href="" class="navBarLink text-white">تماس با ما</a>
+            </div>
+        </nav>
+        
+        <div class="slideMenu hidden md:flex z-10 flex-col items-center px-[5%] py-4 bg-white fixed top-0 h-full w-64 text-white transition-all duration-300 right-[-16rem]">
+        
+            <img src="/Images/slideMenu/SlideMenuLogo.svg" class="w-28" alt="">
+        
+            <hr class="my-6 bg-slate-500 w-full">
+        
+            <div class="navBarLinks text-black flex gap-2 justify-between flex-col items-end w-full">
+                <a href="" class="navBarLink flex flex-row-reverse gap-2 py-4 px-2"><i class="fa fa-home fa-lg"></i>صفحه
+                    اصلی</a>
+                <a href=""
+                    class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                        class="fa fa-user fa-lg"></i>معرفی خدمات</a>
+                <a href="" class="navBarLink flex flex-row-reverse gap-2 rounded-lg text-black w-full hover:bg-yellow-200 py-4 px-2"><i
+                        class="fa fa-sign-in fa-lg"></i>ورود</a>
+                <a href="" class="navBarLink flex flex-row-reverse gap-2 rounded-lg text-black w-full hover:bg-yellow-200 py-4 px-2"><i
+                        class="fa fa-user-plus fa-lg"></i>ثبت نام</a>
+                <a href="" class="navBarLink flex flex-row-reverse gap-2 rounded-lg text-black w-full hover:bg-yellow-200 py-4 px-2"><i
+                        class="fa fa-user-md fa-lg"></i>پروفایل</a>
+                <a href=""
+                    class="navBarLink text-[#FFC14F] flex flex-row-reverse gap-2 rounded-lg w-full py-4 px-2"><i
+                        class="fa fa-cogs fa-lg"></i>درمانگر</a>
+                <a href=""
+                    class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                        class="fa fa-headphones fa-lg"></i>بلاگ</a>
+                <a href="" class="navBarLink flex flex-row-reverse gap-2 rounded-lg w-full py-4 px-2"><i
+                        class="fa fa-window-maximize fa-lg"></i>تماس با ما</a>
+            </div>
+        </div>
+        
+        <header class="h-[20rem] md:h-[10rem] flex items-center px-[5%] bg-[#21273D]">
+        
+            <div class="h-[16rem] w-full rounded-xl">
+
+                <div class="flex justify-between flex-row-reverse gap-3 px-6 pt-8 md:px-2 items-end">
+            
+                    <div class="flex justify-between items-center flex-row-reverse gap-4">
+            
+                        <div class=" my-8 md:mt-12">
+                            <img src="/Images/TreaterPage/ProfilePersona.png" class="min-w-40 md:min-w-16 md:max-w-[7rem]" alt="">
+                        </div>
+            
+                        <div class="flex flex-col items-end justify-end gap-2 text-white">
+            
+                            <div class="flex gap-2 pb-2">
+                                <i class="fa fa-star fa-lg text-yellow-600"></i>
+                                <i class="fa fa-star fa-lg text-yellow-600"></i>
+                                <i class="fa fa-star fa-lg text-yellow-600"></i>
+                                <i class="fa fa-star fa-lg text-yellow-600"></i>
+                                <i class="fa fa-star fa-lg text-white"></i>
+                            </div>
+                            <h4 class="text-3xl font-extrabold md:text-sm">حمیدرضا محمدی</h4>
+                            <small>روانشناس و متخصص در این زمینه</small>
+            
+                        </div>
+                    </div>
+            
+                </div>
+                
+            </div>
+        
+        </header>
+
+        <main class="px-[10%] md:px-[4%] py-24 md:py-12">
+
+            <section class="bg-[#F1F1F1] w-full h-fit rounded-3xl flex flex-col overflow-hidden" dir="rtl">
+
+                <div class="header grid grid-cols-5 md:grid-cols-4 py-6 bg-[#D7D7D7] text-xs">
+                    <div class="flex justify-center opacity-40">شماره</div>
+                    <div class="flex justify-center opacity-40">نام و نام خانوادگی</div>
+                    <div class="flex justify-center opacity-40">وضعیت بیمار</div>
+                    <div class="flex justify-center opacity-40">نقشه مغزی</div>
+                    <div class="flex justify-center opacity-40 md:hidden">تاریخ شروع فعالیت</div>
+                </div>
+
+                <div class="Card h-fit">
+                    <div class="patientRow transition-all grid grid-cols-5 md:grid-cols-4 grid-flow-col py-6 border-b-2 border-gray-300 cursor-pointer">
+                        <div class="rowItem flex justify-center items-center">1.</div>
+                        <div class="rowItem flex justify-center items-center gap-2 md:gap-0">
+                    
+                            <div class="w-8">
+                                <img src="/Images/TreaterPage/ProfilePersona.png" alt="ProfilePhoto1">
+                            </div>
+                    
+                            <div class="md:text-sm md:pr-2">سامان برزگر</div>
+                    
+                        </div>
+                        <div class="rowItem flex justify-center items-center gap-2">
+                    
+                            <div class="bg-[#2dc22d] w-4 h-4 rounded-full"></div>
+                    
+                            <div class="text-xs">خوب</div>
+                    
+                        </div>
+                        <div class="rowItem flex md:flex-col justify-center items-center gap-2 md:gap-0">
+                    
+                            <button class="text-white py-1 px-4 text-sm bg-black rounded-lg md:text-xs">دانلود</button>
+                    
+                            <div><i class="fa fa-eye"></i></div>
+                    
+                        </div>
+                        <div class="rowItem flex justify-center items-center md:hidden opacity-40 text-xs">12/1/1402</div>
+                        <div class="rowItem md:hidden w-8">
+                            <i class="fa fa-sort-desc hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+
+                    <section class="content overflow-hidden flex flex-col w-full py-4 hidden">
+
+                        <div class="flex w-full md:flex-col">
+                            <div class="w-[50%] md:w-full border-l-2 px-[5%]">
+                            
+                                <h3 class="font-extrabold text-lg my-4">پروفایل شناختی</h3>
+                            
+                                <ul class="grid grid-cols-2 w-full my-4 gap-8 list-disc">
+                            
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                </ul>
+                            
+                            </div>
+                            
+                            <div class="w-[50%] md:w-full px-[5%]">
+                            
+                                <h3 class="font-extrabold text-lg my-4">پروفایل رفتاری</h3>
+                            
+                                <ul class="grid grid-cols-2 w-full my-4 gap-8 list-disc">
+                            
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+                            
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                </ul>
+                            
+                            
+                            </div>
+                        </div>
+
+                        <div class="TreaterAdvice">
+
+                            <div class="TreaterHeaderBox expanded flex w-full rounded-lg justify-between px-[8%] hover:bg-slate-300 transition-all py-4 border-b cursor-pointer">
+                                <h3 class="font-extrabold text-xl">توصیه درمانگر</h3>
+                                
+                                <i class="fa fa-sort-desc"></i>
+                            </div>
+
+                            <div class="TreaterContent my-4 px-[7%] overflow-hidden">
+                                <div class="gap-4 grid grid-cols-2 md:flex md:flex-col overflow-scroll">
+
+                                    <section class="rounded-xl flex flex-col items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                        
+                                        <div class="message flex gap-2 items-center justify-between w-full">
+                                    
+                                            <div class="flex items-center gap-2">
+                                                <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+                                    
+                                                <div class="flex flex-col">
+                                    
+                                                    <h5>سامان برزگر</h5>
+                                                    <div class="flex gap-3">
+                                                        <small class="opacity-40">درمانگر</small>
+                                                        <div class="flex gap-1">
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                        </div>
+                                                    </div>
+                                    
+                                                </div>
+                                            </div>
+                                    
+                                            <i class="fa fa-sort-desc messageOpenIcon transition-all"></i>
+                                        </div>
+                                    
+                                        <div class=" messageContent flex hidden">
+                                            <div class="flex mt-4 gap-2">
+                                                <p class="text-xs">مرتیکه شکر کمتر بخورن برای خودت نمیکنی برای خدا بکن</p>
+                                    
+                                                <div>
+                                                    <i class="fa fa-pencil "></i>
+                                                </div>
+                                                <div>
+                                                    <i class="fa fa-trash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </section>
+
+                                    <section class="rounded-xl flex flex-col items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                        
+                                        <div class="message flex gap-2 items-center justify-between w-full">
+                                    
+                                            <div class="flex items-center gap-2">
+                                                <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+                                    
+                                                <div class="flex flex-col">
+                                    
+                                                    <h5>سامان برزگر</h5>
+                                                    <div class="flex gap-3">
+                                                        <small class="opacity-40">درمانگر</small>
+                                                        <div class="flex gap-1">
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                        </div>
+                                                    </div>
+                                    
+                                                </div>
+                                            </div>
+                                    
+                                            <i class="fa fa-sort-desc messageOpenIcon transition-all"></i>
+                                        </div>
+                                    
+                                        <div class=" messageContent flex hidden">
+                                            <div class="flex mt-4 gap-2">
+                                                <p class="text-xs">مرتیکه شکر کمتر بخورن برای خودت نمیکنی برای خدا بکن</p>
+                                    
+                                                <div>
+                                                    <i class="fa fa-pencil "></i>
+                                                </div>
+                                                <div>
+                                                    <i class="fa fa-trash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </section>
+
+                                    <section class="rounded-xl flex flex-col items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                        
+                                        <div class="message flex gap-2 items-center justify-between w-full">
+                                    
+                                            <div class="flex items-center gap-2">
+                                                <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+                                    
+                                                <div class="flex flex-col">
+                                    
+                                                    <h5>سامان برزگر</h5>
+                                                    <div class="flex gap-3">
+                                                        <small class="opacity-40">درمانگر</small>
+                                                        <div class="flex gap-1">
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                        </div>
+                                                    </div>
+                                    
+                                                </div>
+                                            </div>
+                                    
+                                            <i class="fa fa-sort-desc messageOpenIcon transition-all"></i>
+                                        </div>
+                                    
+                                        <div class=" messageContent flex hidden">
+                                            <div class="flex mt-4 gap-2">
+                                                <p class="text-xs">مرتیکه شکر کمتر بخورن برای خودت نمیکنی برای خدا بکن</p>
+                                    
+                                                <div>
+                                                    <i class="fa fa-pencil "></i>
+                                                </div>
+                                                <div>
+                                                    <i class="fa fa-trash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </section>
+
+                                    <section class="rounded-xl flex flex-col items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                        
+                                        <div class="message flex gap-2 items-center justify-between w-full">
+                                    
+                                            <div class="flex items-center gap-2">
+                                                <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+                                    
+                                                <div class="flex flex-col">
+                                    
+                                                    <h5>سامان برزگر</h5>
+                                                    <div class="flex gap-3">
+                                                        <small class="opacity-40">درمانگر</small>
+                                                        <div class="flex gap-1">
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                            <i class="fa fa-star text-yellow-600"></i>
+                                                        </div>
+                                                    </div>
+                                    
+                                                </div>
+                                            </div>
+                                    
+                                            <i class="fa fa-sort-desc messageOpenIcon transition-all"></i>
+                                        </div>
+                                    
+                                        <div class=" messageContent flex hidden">
+                                            <div class="flex mt-4 gap-2">
+                                                <p class="text-xs">مرتیکه شکر کمتر بخورن برای خودت نمیکنی برای خدا بکن</p>
+                                    
+                                                <div>
+                                                    <i class="fa fa-pencil "></i>
+                                                </div>
+                                                <div>
+                                                    <i class="fa fa-trash"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    
+                                    </section>
+
+                                    <section class="rounded-xl flex justify-center items-center border-b border-l-2 p-2 cursor-pointer border-2 h-16 hover:border-3 hover:bg-slate-200">
+                                    
+                                        <i class="fa fa-plus"></i>
+                                    
+                                    </section>
+                                    
+
+                                </div>
+
+                            </div>
+
+                        </div>
+                        
+                    </section>
+
+                </div>
+                
+                <div class="Card h-fit">
+                    <div
+                        class="patientRow transition-all grid grid-cols-5 md:grid-cols-4 grid-flow-col py-6 border-b-2 border-gray-300 cursor-pointer">
+                        <div class="rowItem flex justify-center items-center">1.</div>
+                        <div class="rowItem flex justify-center items-center gap-2 md:gap-0">
+
+                            <div class="w-8">
+                                <img src="/Images/TreaterPage/ProfilePersona.png" alt="ProfilePhoto1">
+                            </div>
+
+                            <div class="md:text-sm md:pr-2">سامان برزگر</div>
+
+                        </div>
+                        <div class="rowItem flex justify-center items-center gap-2">
+
+                            <div class="bg-[#2dc22d] w-4 h-4 rounded-full"></div>
+
+                            <div class="text-xs">خوب</div>
+
+                        </div>
+                        <div class="rowItem flex md:flex-col justify-center items-center gap-2 md:gap-0">
+
+                            <button class="text-white py-1 px-4 text-sm bg-black rounded-lg md:text-xs">دانلود</button>
+
+                            <div><i class="fa fa-eye"></i></div>
+
+                        </div>
+                        <div class="rowItem flex justify-center items-center md:hidden opacity-40 text-xs">12/1/1402</div>
+                        <div class="rowItem md:hidden w-8">
+                            <i class="fa fa-sort-desc hover:cursor-pointer"></i>
+                        </div>
+                    </div>
+
+                    <section class="content overflow-hidden flex flex-col w-full py-4 hidden">
+
+                        <div class="flex w-full md:flex-col">
+                            <div class="w-[50%] md:w-full border-l-2 px-[5%]">
+
+                                <h3 class="font-extrabold text-lg my-4">پروفایل شناختی</h3>
+
+                                <ul class="grid grid-cols-2 w-full my-4 gap-8 list-disc">
+
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                </ul>
+
+                            </div>
+
+                            <div class="w-[50%] md:w-full px-[5%]">
+
+                                <h3 class="font-extrabold text-lg my-4">پروفایل رفتاری</h3>
+
+                                <ul class="grid grid-cols-2 w-full my-4 gap-8 list-disc">
+
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                    <li class="flex justify-evenly items-center">
+                                        <div>گزینه 1</div>
+
+                                        <div
+                                            class="bg-[#4ECA4C] text-white w-10 h-10 mt-1 shadow-[#4eca4c] shadow-md flex justify-center items-center rounded-full">
+                                            7</div>
+                                    </li>
+                                </ul>
+
+
+                            </div>
+                        </div>
+
+                        <div class="TreaterAdvice">
+
+                            <div
+                                class="TreaterHeaderBox expanded flex w-full rounded-lg justify-between px-[8%] hover:bg-slate-300 transition-all py-4 border-b cursor-pointer">
+                                <h3 class="font-extrabold text-xl">توصیه درمانگر</h3>
+
+                                <i class="fa fa-sort-desc"></i>
+                            </div>
+
+                            <div class="TreaterContent gap-4 my-4 px-[7%] grid grid-cols-2 md:flex md:flex-col overflow-hidden">
+
+                                <section
+                                    class="message rounded-xl flex items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                    <div class="flex gap-2">
+
+                                        <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+
+                                        <div class="flex flex-col">
+
+                                            <h5>سامان برزگر</h5>
+                                            <div class="flex gap-3">
+                                                <small class="opacity-40">درمانگر</small>
+                                                <div class="flex gap-1">
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa fa-sort-desc"></i>
+                                </section>
+
+                                <section
+                                    class="message rounded-xl flex items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                    <div class="flex gap-2">
+
+                                        <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+
+                                        <div class="flex flex-col">
+
+                                            <h5>سامان برزگر</h5>
+                                            <div class="flex gap-3">
+                                                <small class="opacity-40">درمانگر</small>
+                                                <div class="flex gap-1">
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa fa-sort-desc"></i>
+                                </section>
+
+                                <section
+                                    class="message rounded-xl flex items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                    <div class="flex gap-2">
+
+                                        <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+
+                                        <div class="flex flex-col">
+
+                                            <h5>سامان برزگر</h5>
+                                            <div class="flex gap-3">
+                                                <small class="opacity-40">درمانگر</small>
+                                                <div class="flex gap-1">
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa fa-sort-desc"></i>
+                                </section>
+
+                                <section
+                                    class="message rounded-xl flex items-center border-b border-l-2 p-2 cursor-pointer hover:bg-slate-200 tranistion-all justify-between">
+                                    <div class="flex gap-2">
+
+                                        <div class="profileIcon w-12"><img src="/Images/TreaterPage/ProfilePersona.png" alt=""></div>
+
+                                        <div class="flex flex-col">
+
+                                            <h5>سامان برزگر</h5>
+                                            <div class="flex gap-3">
+                                                <small class="opacity-40">درمانگر</small>
+                                                <div class="flex gap-1">
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                    <i class="fa fa-star text-yellow-600"></i>
+                                                </div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+
+                                    <i class="fa fa-sort-desc"></i>
+                                </section>
+
+                            </div>
+
+                        </div>
+
+                    </section>
+
+                </div>
+
+
+            </section>
+
+        </main>
+
+        <footer class="px-[5%] pt-8 bg-[#21273D] flex justify-center gap-4 flex-row md:flex-wrap">
+            <div class=" basis-[20%] border-white md:border-none md:order-3 md:basis-[10%]">
+                <div
+                    class="navBarLinks flex flex-col gap-8 p-4 pb-4 justify-between items-center whitespace-nowrap md:border-l">
+                    <a href="" class="navBarLink text-white">صفحه اصلی</a>
+                    <a href="" class="navBarLink text-white">معرفی خدمات</a>
+                    <a href="" class="navBarLink text-white">پروفایل</a>
+                    <a href="" class="navBarLink text-white">درمانگر</a>
+                    <a href="" class="navBarLink text-white">بلاگ</a>
+                    <a href="" class="navBarLink text-white">تماس با ما</a>
+                </div>
+            </div>
+        
+            <div class="border-l-2 basis-[59%] border-white px-12 md:px-0 py-8 md:border-none md:order-1 md:basis-[100%]">
+        
+                <p class="text-white md:text-sm" dir="rtl">این روزها که تقریبا تمامی افراد جامعه به گوشی هوشمند و فضای مجازی
+                    دسترسی دارند، برای خاص بودن باید کاری بیشتر از یک پست
+                    گذاشتن ساده انجام داد. برای خاص بودن باید متن خود را طراحی کنید. افراد خاص برای نگارش متن بیوگرافی، کپشن،
+                    دلنوشته و غیره
+                    وقت صرف میکنند. در گذشته برای اینکار نه تنها خلاقیت و ذهن پویا لازم بود، بلکه دسترسی به فونت های زیبا و کم
+                    نظیر و همچنین
+                    توانایی و دانش استفاده از آنها نیز اهمیت به سزایی داشت. اما نویدک با ساخت این ابزار طراحی متن را بسیار آسان
+                    کرده است.
+            </div>
+        
+            <div class="md:border-l-2 basis-[20%] flex flex-col md:order-3 border-white md:border-none md:basis-[10%]">
+        
+                <div class="pb-2 border-white flex flex-col items-center md:border-b-0">
+        
+                    <img src="/Images//LandingPage/footerLogo.png" class="w-24" alt="">
+        
+                    <div class="socialLinks flex mt-4 pb-4 md:pb-0">
+        
+                        <i class="fa fa-paper-plane text-white fa-lg p-4 md:p-2 mt-2 rounded-full cursor-pointer hover:text-blue-500 transition-colors"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-whatsapp text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-green-600 transition-colors"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-instagram text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-purple-600 transition-colors"
+                            aria-hidden="true"></i>
+                        <i class="fa fa-youtube-play text-white fa-2x p-4 md:p-2 rounded-full cursor-pointer hover:text-red-600 transition-colors"
+                            aria-hidden="true"></i>
+                    </div>
+        
+                </div>
+                <div class="md:order-1">
+                    <ul class="text-white md:text-xs whitespace-nowrap flex flex-col items-end py-4">
+                        <li dir="rtl">ایمیل: spandiarsantal@gmail.com</li>
+                        <li dir="rtl">شماره تلفن: 123456789</li>
+                        <li>آدرس: تهران، مرکز تهران</li>
+                    </ul>
+                </div>
+        
+            </div>
+        
+        </footer>
+    
+    <script src="TreaterPageIndex.js"></script>
+    <script src="../utils/sideMenu.js"></script>
+</body>
+</html>

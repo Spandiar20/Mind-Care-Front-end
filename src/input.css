@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* @layer base {
+    @font-face {
+        font-family: 'IRANSansX';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url(/src/utils/fonts/IRANSansX-Medium.ttf) format('ttf');
+    }
+} */
+
+@font-face {
+    font-family: 'IRANSansX';
+    font-style: normal;
+    font-weight: 100;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    font-style: normal;
+    font-weight: 200;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-UltraLight.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    font-style: normal;
+    font-weight: 300;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-Light.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    font-style: normal;
+    font-weight: 400;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-Regular.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    /* font-style: black; */
+    font-weight: 500;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-Medium.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    /* font-style: black; */
+    font-weight: 600;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansXFaNum-DemiBold.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    /* font-style: black; */
+    font-weight: 700;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    /* font-style: black; */
+    font-weight: 800;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-ExtraBold.ttf);
+}
+
+@font-face {
+    font-family: 'IRANSansX';
+    /* font-style: black; */
+    font-weight: 900;
+    /* font-display: swap; */
+    src: url(/src/utils/fonts/IRANSansX-Black.ttf);
+}
+
+@import url('https://fonts.cdnfonts.com/css/iranian-sans');

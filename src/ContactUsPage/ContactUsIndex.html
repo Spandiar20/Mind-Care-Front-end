@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <link href="../output.css" rel="stylesheet">
+
+    <title>Contact Us</title>
+</head>
+<body class=" font-iransansx">
+    
+    <div class="flex flex-row gap-12 justify-between lg:flex-col">
+        
+        <section class="flex flex-col basis-[60%] px-8">
+            
+                <div class="navBarLinks flex py-4 pr-4 gap-8 flex-row-reverse">
+                    <div class="flex flex-row-reverse md:hidden gap-8">
+                        <a href="" class="navBarLink text-black">صفحه اصلی</a>
+                        <a href="" class="navBarLink text-black">معرفی خدمات</a>
+                        <a href="" class="navBarLink text-black">پروفایل</a>
+                        <a href="" class="navBarLink text-black">درمانگر</a>
+                        <a href="" class="navBarLink text-black">بلاگ</a>
+                        <a href="" class="navBarLink text-gray-600">تماس با ما</a>
+                    </div>
+
+                    <section class="responsiveMenu hidden md:grid grid-cols-3 justify-end items-center px-[5%] py-4">
+                    
+                        <div></div>
+                    
+                        <img src="/Images/slideMenu/SlideMenuLogo.svg" class="w-40 justify-self-center" alt="">
+                    
+                        <div class="flex justify-end">
+                            <i class="fa fa-bars fa-lg cursor-pointer align-end" id="hamburgerMenuButton" aria-hidden="true"></i>
+                    
+                        </div>
+                    
+                    </section>
+
+                </div>
+
+                <div
+                        class="slideMenu hidden md:flex flex-col items-center px-[5%] py-4 bg-white fixed z-10 top-0 h-full w-64 text-white transition-all duration-300 right-[-16rem]">
+                    
+                        <img src="/Images/slideMenu/SlideMenuLogo.svg" class="w-28" alt="">
+                    
+                        <hr class="my-6 bg-slate-500 w-full">
+                    
+                        <div class="navBarLinks flex gap-2 justify-between flex-col items-end w-full">
+                            <a href="" class="navBarLink text-black flex flex-row-reverse gap-2 py-4 px-2"><i
+                                    class="fa fa-home fa-lg"></i>صفحه اصلی</a>
+                            <a href=""
+                                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                                    class="fa fa-user fa-lg"></i>معرفی خدمات</a>
+                            <a href=""
+                                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                                    class="fa fa-user-md fa-lg"></i>پروفایل</a>
+                            <a href=""
+                                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                                    class="fa fa-cogs fa-lg"></i>درمانگر</a>
+                            <a href=""
+                                class="navBarLink text-black flex flex-row-reverse gap-2 rounded-lg hover:bg-yellow-200 w-full py-4 px-2"><i
+                                    class="fa fa-headphones fa-lg"></i>بلاگ</a>
+                            <a href=""
+                                class="navBarLink  flex flex-row-reverse gap-2 rounded-lg text-[#FFC14F] w-full py-4 px-2"><i
+                                    class="fa fa-window-maximize fa-lg"></i>تماس با ما</a>
+                        </div>
+                </div>
+
+            <div class="flex flex-col items-end mt-8">
+                <h1 class="font-extrabold text-3xl">صبور باشید</h1>
+                <small class="text-xs mt-2 text-black opacity-45 font-light text-right">ما تلاش خود را خواهیم تا در اسرع وقت به پیام های شما پاسخ بدهیم</small>
+            </div>
+
+            <form class="inputs flex flex-col gap-6 mt-4">
+                
+                <div class="flex flex-row-reverse gap-5">
+
+                    <section class="inputSection flex basis-[50%] flex-col gap-3 items-end mt-2 justify-between">
+                        <label for="name" class="text-justify" dir="rtl">نام:</label>
+                        <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                            <input class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="text" name="name" id="Name"
+                                placeholder="سامان">
+                            <img src="/Images/ContactUsPage/personIcon.svg" class="pl-2" alt="personIcon">
+                        </div>
+                    </section>
+                    
+                    <section class="inputSection flex basis-[50%] flex-col gap-3 items-end mt-2 justify-between">
+                        <label for="familyName" dir="rtl">نام خانوادگی:</label>
+                        <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                            <input class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="text" name="familyName" id="FamilyName"
+                                placeholder="برزگر">
+                                <img src="/Images/ContactUsPage/personIcon.svg" alt="PersonIcon" class="pl-2">
+                        </div>
+                    </section>
+
+                </div>
+
+                <section class="inputSection flex flex-col gap-3 items-end justify-between">
+                    <label for="ٍEmail" dir="rtl">ایمیل:</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="email" name="email" id="Email"
+                            placeholder="ایمیل خود را وارد کنید">
+                        <img src="/Images/SignUpPage/addsignLogo.svg" class="pl-2" alt="EmailIcon">
+                    </div>
+                </section>
+
+                <section class="inputSection flex flex-col gap-3 items-end justify-between">
+                    <label for="phoneNumber" dir="rtl">شماره تلفن:</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="tel" name="phoneNumber" id="PhoneNumber"
+                            placeholder="شماره تلفن خود را وارد کنید">
+                        <img src="/Images/SignUpPage/TelIcon.svg" class="pl-2" alt="telephoneNumberIcon">
+                    </div>
+                </section>
+
+                <section class="inputSection">
+                        <textarea class="bg-[#e5e5e5] p-5 outline-none w-full resize-none h-[8rem] rounded-2xl" dir="rtl" type="text" name="familyName" id="FamilyName"
+                            placeholder="متن خود را بنویسید"></textarea>
+                </section>
+
+
+
+                <button class="bg-[#21273D] text-white py-4 my-2 w-[80%] rounded-lg self-center hover:bg-[#1a1f31] transition-all">
+                    ارسال
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="h-fit bg-black backdrop-opacity-95 relative overflow-hidden">
+
+            <img src="/Images/ContactUsPage/ContactUsBanner.png" class="w-full" alt="leftBanner">
+
+            <div class="absolute bottom-0 flex flex-col ml-[10%]">
+
+                <div class=" pb-2 flex flex-col gap-2 items-center">
+                
+                    <img src="/Images//LandingPage/Group 28.png" alt="">
+                    
+                    <div class="text-white w-[70%] text-justify" dir="rtl">
+                        شما میتوانید نظرات و انتقادات خودتان را برای تیم ما بفرستید تا ما بتوانیم به خدمات خودمان بهبود ببخشیم تا شما تجربه ای
+                        منحصر به فرد داشته باشید.
+                    </div>
+                
+                    <div class="socialLinks flex mt-4 pb-4">
+                
+                        <i class="fa fa-paper-plane hidden text-white fa-lg p-4 mt-2 rounded-full" aria-hidden="true"></i>
+                        <i class="fa fa-whatsapp text-white fa-2x p-4 rounded-full" aria-hidden="true"></i>
+                        <i class="fa fa-instagram text-white fa-2x p-4 rounded-full" aria-hidden="true"></i>
+                        <i class="fa fa-youtube-play text-white fa-2x p-4 rounded-full" aria-hidden="true"></i>
+                
+                    </div>
+
+                    <div class="flex gap-8 text-white">
+                        
+                        <small>شماره تلفن: 123456789</small>
+                        <small> آدرس: تهران، مرکز تهران</small>
+
+                    </div>
+                
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+    
+    <script src="../utils/sideMenu.js"></script>
+
+</body>
+</html>

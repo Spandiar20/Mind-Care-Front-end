@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  },
+  "dependencies": {
+    "jquery": "^3.7.1",
+    "jsdom": "^24.0.0",
+    "tailwind": "^4.0.0"
+  }
+}

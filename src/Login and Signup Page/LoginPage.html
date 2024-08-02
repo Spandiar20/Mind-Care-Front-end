@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+
+    <title>login</title>
+</head>
+<body class="px-8 py-8 font-iransansx">
+
+    <script src="./SignUpPage.js"></script>
+
+    <div class="flex flex-row-reverse gap-12 justify-between">
+
+        <section class="flex flex-col basis-[50%] px-8 md:basis-[100%]">
+
+            <div class="flex flex-col items-end">
+                <h1 class="font-extrabold text-3xl">ورود</h1>
+                <small class="text-xs mt-2 font-bold">لطفا شماره تلفن و رمز عبور خودتان را وارد کنید</small>
+            </div>
+
+            <form class="inputs flex flex-col gap-6 mt-12">
+                
+                <section class="inputSection flex flex-col gap-3 items-end mt-8 justify-between">
+                    <label for="ٍEmail" dir="rtl">ایمیل:</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input class="bg-[#e5e5e5] py-5 px-2 outline-none w-full" dir="rtl" type="email" name="email" id="Email" placeholder="ایمیل خود را وارد کنید">
+                        <img src="/Images/SignUpPage/addsignLogo.svg" class="pl-2" alt="EmailIcon">
+                    </div>
+                </section>
+
+                <section class="inputSection flex flex-col gap-3 items-end mt-2 justify-between">
+                    <label for="password" dir="rtl">رمز عبور:</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input  class="bg-[#e5e5e5] py-5 px-2 outline-none w-full" dir="rtl" type="password" name="password" id="Password" placeholder="رمز عبور خود را وارد کنید">
+                        <div class="flex flex-row-reverse justify-between w-36 px-4">
+                            <img src="/Images/SignUpPage/Eye.svg" class="cursor-pointer showPasswordIcon" alt="PasswordEyeIcon">
+                            <img src="/Images/SignUpPage/LockIcon.svg" class="w-12" alt="PasswordIcon">
+                        </div>
+                    </div>
+                </section>
+
+                <a class="self-center mt-6 text-sm text-blue-700 underline" href="#" dir="rtl">اکانت دارید؟ از اینجا وارد شوید.</a>
+
+                <button class="bg-[#21273D] text-white py-4 mt-2 w-[80%] rounded-lg self-center hover:bg-[#1a1f31] transition-all">
+                    تایید
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="rounded-xl overflow-hidden basis-[50%] md:hidden">
+
+            <img class="w-[88%]" src="/Images/SignUpPage/SignUpBanner.png" alt="">
+
+        </section>
+
+    </div>
+    
+</body>
+</html>

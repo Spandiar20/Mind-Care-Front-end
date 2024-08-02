@@ -1,0 +1,85 @@
+z<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../output.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Sign Up</title>
+</head>
+<body class="px-8 py-8 font-iransansx">
+
+    <div class="flex flex-row-reverse gap-12 justify-between">
+
+        <section class="flex flex-col basis-[50%] px-8 md:basis-[100%]">
+
+            <div class="flex flex-col items-end">
+                <h1 class="font-extrabold text-3xl">خوش آمدید</h1>
+                <small class="text-xs mt-2 font-bold">لطفا شماره تلفن و رمز عبور خودتان را وارد کنید</small>
+            </div>
+
+            <form class="inputs flex flex-col gap-6 mt-4">
+                
+                <section class="inputSection flex flex-col gap-3 items-end mt-4 justify-between">
+                    <label for="phoneNumber">شماره تلفن:</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="tel" name="phoneNumber" id="PhoneNumber" placeholder="شماره تلفن خود را وارد کنید">
+                        <img src="/Images/SignUpPage/TelIcon.svg" class="pl-2" alt="telephoneNumberIcon">
+                    </div>
+                </section>
+
+                <section class="inputSection flex flex-col gap-3 items-end mt-2 justify-between">
+                    <label for="password">رمز عبور:</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input  class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="password" name="password" id="Password" placeholder="رمز عبور خود را وارد کنید">
+                        <div class="flex flex-row-reverse justify-between w-36 px-4">
+                            <img src="/Images/SignUpPage/Eye.svg" class="showPasswordIcon cursor-pointer" alt="PasswordEyeIcon">
+                            <img src="/Images/SignUpPage/LockIcon.svg" class="w-12" alt="PasswordIcon">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="inputSection flex flex-col gap-3 items-end mt-2 justify-between">
+                    <label for="phoneNumber">تکرار رمز عبور</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="password" name="password" id="Password" placeholder="رمز عبور خود را تکرار کنید">
+                        <div class="flex items-center justify-center w-16">
+                            <img src="/Images/SignUpPage/Eye.svg" class="showPasswordIcon cursor-pointer pl-2" alt="PasswordEye">
+                        </div>
+                    </div>
+                </section>
+
+                <section class="inputSection flex flex-col gap-3 items-end mt-2 justify-between">
+                    <label for="phoneNumber">رمز یکبار مصرف</label>
+                    <div class="flex flex-row-reverse bg-[#e5e5e5] w-full overflow-hidden rounded-2xl justify-between">
+                        <input class="bg-[#e5e5e5] p-5 outline-none w-full" dir="rtl" type="password" name="onePassword" id="OnePassword" placeholder="رمز یکبار مصرف را وارد کنید">
+                        <div class="startTimerBtn flex items-center select-none justify-center m-1 w-16 text-white rounded-lg bg-[#70de41]">
+                            <i class="fa fa-envelope-o fa-2x dynamicIcon"></i>
+                            <div class="hidden timerTxt"></div>
+                        </div>
+                    </div>
+                </section>
+
+                <button class="bg-[#21273D] text-white py-4 mt-8 w-[80%] rounded-lg self-center hover:bg-[#1a1f31] transition-all">
+                    تایید
+                </button>
+
+            </form>
+
+        </section>
+
+        <section class="rounded-xl overflow-hidden basis-[60%] md:hidden">
+
+            <img class="w-[88%]" src="/Images/SignUpPage/SignUpBanner.png" alt="">
+
+        </section>
+
+    </div>
+
+    <script src="./SignUpPage.js"></script>
+    
+</body>
+</html>
